@@ -35,10 +35,10 @@ models:
   jaffle_shop:
     # Applies to all files under models/example/
     example:
-      materialized: view
+        materialized: view
 
     marts:
-      core:
-        materialized: table
+        core:
+            +materialized: table
     staging:
-        materialized: view
+            +materialized: view
