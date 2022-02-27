@@ -12,6 +12,7 @@ final as (
     select
         orders.order_id,
         orders.customer_id,
+        orders.order_date,
         payments.amount
     from orders
 
