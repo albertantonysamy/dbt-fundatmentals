@@ -3,11 +3,14 @@ with payments as (
     select 
         id as payment_id,
         orderid as order_id,
-        amount
+        paymentmethod as paymentmethod,
+        status,
+        --amount stored in cents, convert it to dollars
+        amount/100 as amount,
+        created as created_at
 
         from raw.stripe.payment
-            where status = 'success'
-
+         
 )
 
 select * from payments
